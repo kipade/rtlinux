@@ -42,15 +42,18 @@ override_dh_test:
 override_dh_build:
 	$(MAKE)
 
-# override_dh_install:
-# 	@echo noop $@
-
 override_dh_auto_install:
-	dh_auto_install -- \
-		INSTALL_PATH=debian/linux-image-$(DEB_VERSION_UPSTREAM)/boot
+	@echo noop $@
 
-# override_dh_builddeb:
-# 	$(MAKE) \
-# 		KDEB_SOURCENAME=$(DEB_SOURCE) \
-# 		KDEB_PKGVERSION=$(DEB_VERSION) \
-# 		bindeb-pkg
+override_dh_install:
+	@echo noop $@
+
+# override_dh_auto_install:
+# 	dh_auto_install -- \
+# 		INSTALL_PATH=debian/linux-image-$(DEB_VERSION_UPSTREAM)/boot
+
+override_dh_builddeb:
+	$(MAKE) \
+		KDEB_SOURCENAME=$(DEB_SOURCE) \
+		KDEB_PKGVERSION=$(DEB_VERSION) \
+		bindeb-pkg
