@@ -1,0 +1,5 @@
+linux-4.16.18-rt12 (4.16.18-rt12-1) bionic; urgency=low
+
+  * Custom built Linux kernel.
+
+ -- Neil Roza <neil@rtr.ai>  Thu, 04 Mar 2021 14:44:03 +0000
