@@ -28,6 +28,9 @@ export DEB_VERSION_UPSTREAM_REVISION
 override_dh_clean:
 	@echo noop $@
 
+override_dh_auto_clean:
+	@echo noop $@
+
 # rm -rf debian/*tmp debian/files
 # mv debian/ debian.backup # debian/ might be cleaned away
 # $(MAKE) clean
