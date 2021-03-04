@@ -1,3 +1,18 @@
+linux-4.16.18-rt12 (4.16.18-rt12-1ubuntu1) bionic; urgency=medium
+
+  * add debian/gbp.conf
+  * ed debian/control: Build-Depends: +libelf-dev
+  * ed debian/control: Build-Depends: +libssl-dev
+  * try debhelper
+  * override_dh_clean: noop
+  * override_dh_auto_clean: noop
+  * add debian/source/format
+  * try this
+  * override_dh_*install: noop
+  * ed debian/rules: rm commented code
+
+ -- Neil Roza <neil@rtr.ai>  Thu, 04 Mar 2021 18:12:58 +0000
+
 linux-4.16.18-rt12 (4.16.18-rt12-1) bionic; urgency=low
 
   * Custom built Linux kernel.
