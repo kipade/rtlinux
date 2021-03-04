@@ -5,6 +5,7 @@ Maintainer: Neil Roza <neil@rtr.ai>
 Build-Depends:
  bc,
  cpio,
+ debhelper (>= 10),
  kmod,
  libelf-dev,
  libssl-dev,
