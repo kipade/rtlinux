@@ -2,7 +2,11 @@ Source: linux-4.16.18-rt12
 Section: kernel
 Priority: optional
 Maintainer: Neil Roza <neil@rtr.ai>
-Build-Depends: bc, kmod, cpio 
+Build-Depends:
+ bc,
+ cpio,
+ kmod,
+ libelf-dev,
 Homepage: http://www.kernel.org/
 
 Package: linux-image-4.16.18-rt12
