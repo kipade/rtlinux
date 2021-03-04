@@ -11,7 +11,6 @@ export DEB_VERSION_EPOCH_UPSTREAM
 export DEB_VERSION_UPSTREAM
 export DEB_VERSION_UPSTREAM_REVISION
 
-
 # see FEATURE AREAS in dpkg-buildflags(1)
 #export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
@@ -31,11 +30,6 @@ override_dh_clean:
 override_dh_auto_clean:
 	@echo noop $@
 
-# rm -rf debian/*tmp debian/files
-# mv debian/ debian.backup # debian/ might be cleaned away
-# $(MAKE) clean
-# mv debian.backup debian
-
 override_dh_test:
 	@echo noop $@
 
@@ -47,10 +41,6 @@ override_dh_auto_install:
 
 override_dh_install:
 	@echo noop $@
-
-# override_dh_auto_install:
-# 	dh_auto_install -- \
-# 		INSTALL_PATH=debian/linux-image-$(DEB_VERSION_UPSTREAM)/boot
 
 override_dh_builddeb:
 	$(MAKE) \
